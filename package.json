@@ -11,7 +11,8 @@
     "lint:check": "eslint . --ext js,jsx",
     "lint:write": "eslint --fix . --ext js,jsx",
     "format:check": "prettier --check .",
-    "format:write": "prettier --write ."
+    "format:write": "prettier --write .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -25,7 +26,14 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
     "prettier": "3.0.3",
     "vite": "^4.4.5"
+  },
+  "lint-staged": {
+    "*": "prettier --write --ignore-unknown",
+    "*.js": "eslint",
+    "*.ts": "eslint"
   }
 }
