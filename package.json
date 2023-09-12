@@ -1,39 +1,25 @@
 {
-  "name": "messenger-app-frontend",
+  "name": "my-app",
+  "version": "0.1.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "test": "echo no test specified",
-    "lint:check": "eslint . --ext js,jsx",
-    "lint:write": "eslint --fix . --ext js,jsx",
-    "format:check": "prettier --check .",
-    "format:write": "prettier --write .",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
     "prepare": "husky install"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "eslint": "8.49.0",
+    "eslint-config-next": "13.4.19",
+    "next": "13.4.19",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.15",
-    "@types/react-dom": "^18.2.7",
-    "@vitejs/plugin-react": "^4.0.3",
-    "eslint": "^8.45.0",
-    "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.3",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "prettier": "3.0.3",
-    "vite": "^4.4.5"
-  },
-  "lint-staged": {
-    "*": "prettier --write --ignore-unknown",
-    "*.jsx": "eslint",
-    "*.js": "eslint"
+    "sass": "^1.66.1"
   }
 }
