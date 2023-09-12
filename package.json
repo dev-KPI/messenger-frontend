@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "test": "echo tests are not yet implemented",
+    "lint:check": "next lint",
+    "lint:write": "next lint --fix",
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write .",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -17,6 +21,7 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@flydotio/dockerfile": "^0.4.9",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "prettier": "3.0.3",
