@@ -1,11 +1,11 @@
 'use client'
 
-import './global.scss'
+import './global.css'
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="body">{children}</body>
     </html>
   )
 }
