@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.body {
-  @apply h-screen flex items-center justify-center bg-slate-300;
+html,
+body {
+  @apply min-h-screen;
 }
