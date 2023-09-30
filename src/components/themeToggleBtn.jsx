@@ -1,16 +1,13 @@
-import { useTheme } from 'next-themes'
+import { ThemeContext } from '@/store/theme-context'
 import Image from 'next/image'
+import { useContext } from 'react'
 
 export default function ThemeToggleButton() {
-  const { resolvedTheme, setTheme } = useTheme()
-
-  const toggleThemeHandler = () => {
-    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
-  }
+  const { theme, toggleTheme } = useContext(ThemeContext)
 
   return (
-    <button className="w-fit mx-auto" onClick={toggleThemeHandler}>
-      {resolvedTheme === 'light' ? (
+    <button className="w-fit mx-auto" onClick={toggleTheme}>
+      {theme === 'light' ? (
         <Image
           src="/icons/moon.svg"
           width={28}
