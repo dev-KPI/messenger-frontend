@@ -15,18 +15,20 @@ export default function ThemeProvider({ children }) {
   }, [currentTheme])
 
   const checkTheme = () => {
-    if (
-      localStorage.theme === 'dark' ||
-      (!('theme' in localStorage) &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
+    const isDarkPreferred = window.matchMedia(
+      '(prefers-color-scheme: dark)'
+    ).matches
+    const isDarkStored = localStorage.theme === 'dark'
+
+    if (isDarkStored || (!localStorage.theme && isDarkPreferred)) {
       localStorage.setItem('theme', 'dark')
       document.documentElement.classList.add('dark')
       setCurrentTheme('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-      setCurrentTheme('light')
+      return
     }
+
+    document.documentElement.classList.remove('dark')
+    setCurrentTheme('light')
   }
 
   const toggleThemeHandler = () => {
