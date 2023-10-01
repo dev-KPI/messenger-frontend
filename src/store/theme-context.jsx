@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useEffect, useState } from 'react'
+import { createContext, useCallback, useEffect, useState } from 'react'
 
 export const ThemeContext = createContext({
   theme: 'dark',
@@ -12,9 +12,9 @@ export default function ThemeProvider({ children }) {
 
   useEffect(() => {
     checkTheme()
-  }, [currentTheme])
+  }, [checkTheme, currentTheme])
 
-  const checkTheme = () => {
+  const checkTheme = useCallback(() => {
     const isDarkPreferred = window.matchMedia(
       '(prefers-color-scheme: dark)'
     ).matches
@@ -29,14 +29,14 @@ export default function ThemeProvider({ children }) {
 
     document.documentElement.classList.remove('dark')
     setCurrentTheme('light')
-  }
+  }, [])
 
-  const toggleThemeHandler = () => {
+  const toggleThemeHandler = useCallback(() => {
     const current = localStorage.getItem('theme')
     const next = current === 'dark' ? 'light' : 'dark'
     localStorage.setItem('theme', next)
     setCurrentTheme(next)
-  }
+  }, [])
 
   return (
     <ThemeContext.Provider
