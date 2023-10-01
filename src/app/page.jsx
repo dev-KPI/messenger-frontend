@@ -1,6 +1,8 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import Message from '@/components/message'
+import ThemeToggle from '@/components/ThemeToggle'
 
 const now = Date.now()
 const MOCK_MESSAGES = [
@@ -14,6 +16,16 @@ const MOCK_MESSAGES = [
 ]
 
 export default function Home() {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
+
   return (
     <main className="flex flex-col gap-3 p-3">
       {MOCK_MESSAGES.map(({ sentAt, content }, i) => (
@@ -21,6 +33,7 @@ export default function Home() {
           {content}
         </Message>
       ))}
+      <ThemeToggle />
     </main>
   )
 }

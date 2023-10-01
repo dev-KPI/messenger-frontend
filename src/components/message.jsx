@@ -16,7 +16,7 @@ export default function Message({ sentAt, children }) {
           alt="Picture of the author"
         />
       </Link>
-      <div className="flex justify-between gap-2 rounded-lg rounded-bl-none w-fit max-w-md py-2 px-3 bg-orange-100">
+      <div className="bg-primary dark:bg-dark text-light flex justify-between gap-2 rounded-lg rounded-bl-none w-fit max-w-md py-2 px-3 bg-orange-100">
         <p className="break-words">{children}</p>
         <span className="text-xs self-end">{formatTime(sentAt)}</span>
       </div>
