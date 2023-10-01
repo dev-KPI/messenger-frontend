@@ -4,7 +4,7 @@ import { createContext, useEffect, useState } from 'react'
 
 export const ThemeContext = createContext({
   theme: 'light',
-  toggleTheme: () => {},
+  toggle: () => {},
 })
 
 export default function ThemeProvider({ children }) {
@@ -43,7 +43,7 @@ export default function ThemeProvider({ children }) {
 
   return (
     <ThemeContext.Provider
-      value={{ theme: currentTheme, toggleTheme: toggleThemeHandler }}
+      value={{ theme: currentTheme, toggle: toggleThemeHandler }}
     >
       {children}
     </ThemeContext.Provider>

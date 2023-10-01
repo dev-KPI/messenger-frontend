@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Message from '@/components/message'
-import ThemeToggleButton from '@/components/themeToggleBtn'
+import ThemeToggle from '@/components/ThemeToggle'
 
 const now = Date.now()
 const MOCK_MESSAGES = [
@@ -33,7 +33,7 @@ export default function Home() {
           {content}
         </Message>
       ))}
-      <ThemeToggleButton />
+      <ThemeToggle />
     </main>
   )
 }
