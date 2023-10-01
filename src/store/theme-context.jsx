@@ -32,15 +32,10 @@ export default function ThemeProvider({ children }) {
   }
 
   const toggleThemeHandler = () => {
-    const theme = localStorage.getItem('theme')
-
-    if (theme) {
-      localStorage.setItem('theme', theme === 'dark' ? 'light' : 'dark')
-    } else {
-      localStorage.setItem('theme', 'dark')
-    }
-
-    setCurrentTheme(currentTheme === 'light' ? 'dark' : 'light')
+    const current = localStorage.getItem('theme')
+    const next = current === 'dark' ? 'light' : 'dark'
+    localStorage.setItem('theme', next)
+    setCurrentTheme(next)
   }
 
   return (
