@@ -10,10 +10,6 @@ export const ThemeContext = createContext({
 export default function ThemeProvider({ children }) {
   const [currentTheme, setCurrentTheme] = useState('light')
 
-  useEffect(() => {
-    checkTheme()
-  }, [checkTheme, currentTheme])
-
   const checkTheme = useCallback(() => {
     const isDarkPreferred = window.matchMedia(
       '(prefers-color-scheme: dark)'
@@ -37,6 +33,10 @@ export default function ThemeProvider({ children }) {
     localStorage.setItem('theme', next)
     setCurrentTheme(next)
   }, [])
+
+  useEffect(() => {
+    checkTheme()
+  }, [checkTheme, currentTheme])
 
   return (
     <ThemeContext.Provider
