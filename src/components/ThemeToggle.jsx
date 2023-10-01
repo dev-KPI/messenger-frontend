@@ -1,6 +1,8 @@
-import { ThemeContext } from '@/store/theme-context'
 import Image from 'next/image'
+import { ThemeContext } from '@/store/theme-context'
 import { useContext } from 'react'
+
+const iconSize = 28
 
 export default function ThemeToggle() {
   const { theme, toggle } = useContext(ThemeContext)
@@ -10,15 +12,15 @@ export default function ThemeToggle() {
       {theme === 'light' ? (
         <Image
           src="/icons/moon.svg"
-          width={28}
-          height={28}
+          width={iconSize}
+          height={iconSize}
           alt="Dark Theme Icon"
         />
       ) : (
         <Image
           src="/icons/sun.svg"
-          width={28}
-          height={28}
+          width={iconSize}
+          height={iconSize}
           alt="Light Theme Icon"
         />
       )}
