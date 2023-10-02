@@ -1,4 +1,4 @@
-import { timeFormatter } from '@/utils/time'
+import { timeFormatter } from '@/utils'
 import Image from 'next/image'
 import Link from 'next/link'
 
