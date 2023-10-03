@@ -8,23 +8,29 @@ export const ThemeContext = createContext({
 })
 
 export default function ThemeProvider({ children }) {
-  const [currentTheme, setCurrentTheme] = useState('light')
+  const [currentTheme, setCurrentTheme] = useState('dark')
 
   const checkTheme = useCallback(() => {
-    const isDarkPreferred = window.matchMedia(
-      '(prefers-color-scheme: dark)'
+    const isLightPreferred = window.matchMedia(
+      '(prefers-color-scheme: light)'
     ).matches
-    const isDarkStored = localStorage.theme === 'dark'
+    const isThemeStored = localStorage.theme
+    const isLightStored = localStorage.theme === 'light'
 
-    if (isDarkStored || (!localStorage.theme && isDarkPreferred)) {
-      localStorage.setItem('theme', 'dark')
-      document.documentElement.classList.add('dark')
-      setCurrentTheme('dark')
+    if (isLightStored || (!isThemeStored && isLightPreferred)) {
+      if (!isThemeStored) {
+        localStorage.setItem('theme', 'light')
+      }
+      document.documentElement.classList.remove('dark')
+      setCurrentTheme('light')
       return
     }
 
-    document.documentElement.classList.remove('dark')
-    setCurrentTheme('light')
+    if (!isThemeStored) {
+      localStorage.setItem('theme', 'dark')
+    }
+    document.documentElement.classList.add('dark')
+    setCurrentTheme('dark')
   }, [])
 
   const toggleThemeHandler = useCallback(() => {
