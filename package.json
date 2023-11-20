@@ -14,7 +14,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "eslint": "8.50.0",
+    "eslint": "8.54.0",
     "eslint-config-next": "13.5.3",
     "next": "13.5.3",
     "react": "18.2.0",
