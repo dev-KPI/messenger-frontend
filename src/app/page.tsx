@@ -18,7 +18,6 @@ export default function Home() {
         />
       </svg>
       <div>GOLUB</div>
-      <div>🚀</div>
     </div>
   )
 }
