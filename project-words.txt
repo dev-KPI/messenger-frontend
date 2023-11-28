@@ -1,0 +1,5 @@
+Autobuild
+GOLUB
+tailwindcss
+tsbuildinfo
+vercel
