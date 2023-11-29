@@ -1,32 +1,39 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
-  "private": true,
+  "name": "golub",
+  "version": "0.0.1",
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "echo tests are not yet implemented",
-    "lint:check": "next lint",
-    "lint:write": "next lint --fix",
-    "format:check": "prettier --check .",
-    "format:write": "prettier --write .",
-    "prepare": "husky install"
+    "test": "echo No tests here.",
+    "eslint:check": "eslint .",
+    "eslint:write": "eslint --fix .",
+    "prettier:check": "prettier --check .",
+    "prettier:write": "prettier --write .",
+    "typescript:check": "tsc -p tsconfig.json",
+    "prepare": "husky install",
+    "cspell": "cspell --show-suggestions --show-context --gitignore ."
   },
   "dependencies": {
-    "eslint": "8.50.0",
-    "eslint-config-next": "13.5.3",
-    "next": "13.5.3",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "next": "14.0.3",
+    "react": "^18",
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "@flydotio/dockerfile": "^0.4.10",
-    "autoprefixer": "^10.4.16",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "cspell": "^7.3.8",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.3",
+    "eslint-plugin-perfectionist": "^2.5.0",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
-    "postcss": "^8.4.30",
+    "postcss": "^8",
     "prettier": "3.0.3",
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
   }
 }
