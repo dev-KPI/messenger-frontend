@@ -1,4 +1,5 @@
 Autobuild
+autofetch
 GOLUB
 tailwindcss
 tsbuildinfo
