@@ -41,6 +41,10 @@ const config: Config = {
           yellow: 'rgba(255, 204, 0, 1)',
         },
       },
+      fontFamily: {
+        text: ['var(--font-text)'],
+        title: ['var(--font-title)'],
+      },
     },
   },
 }
