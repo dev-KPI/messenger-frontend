@@ -18,8 +18,7 @@ export default function Home() {
         This is an IconChange component:{' '}
         <IconChange
           className="text-base-gray-1 hover:text-bright-orange transition-colors"
-          height={48}
-          width={48}
+          size="lg"
         />
         <p>Hover me!</p>
       </div>
