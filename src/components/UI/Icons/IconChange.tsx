@@ -1,19 +1,17 @@
+import IconProps from '@/types/IconProps'
+import { ICON_SIZE } from '@/types/enums/IconSize'
 import { FC } from 'react'
 
-type IconChangeProps = {
-  className?: string
-  height?: number
-  width?: number
-}
+const IconChange: FC<IconProps> = ({ className, size }) => {
+  const dimension = size ? ICON_SIZE[size] : ICON_SIZE['md']
 
-const IconChange: FC<IconChangeProps> = ({ className, height, width }) => {
   return (
     <svg
       className={className}
       fill="none"
-      height={height || 24}
+      height={dimension}
       viewBox="0 0 24 24"
-      width={width || 24}
+      width={dimension}
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
