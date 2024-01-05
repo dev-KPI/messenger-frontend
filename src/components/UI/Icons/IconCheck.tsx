@@ -1,9 +1,9 @@
 import IconProps from '@/types/IconProps'
-import { ICON_SIZE } from '@/types/enums/IconSize'
+import { getIconDimension } from '@/utils'
 import { FC } from 'react'
 
 const IconCheck: FC<IconProps> = ({ className, size }) => {
-  const dimension = size ? ICON_SIZE[size] : ICON_SIZE['md']
+  const dimension = getIconDimension(size)
 
   return (
     <svg
