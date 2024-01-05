@@ -1,4 +1,4 @@
-import AuthForm from '@/components/Pages/Auth/AuthForm'
+import FormAuth from '@/components/Pages/Auth/FormAuth'
 import ImageCard from '@/components/Pages/Auth/ImageCard'
 import Image from 'next/image'
 
@@ -11,7 +11,7 @@ export default function Auth() {
         </ImageCard>
         <div>
           <h1 className="title-lg">Authentication</h1>
-          <AuthForm />
+          <FormAuth />
         </div>
       </div>
     </section>
