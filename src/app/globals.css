@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply font-text text-[1.0625rem] leading-tight tracking-[0.0063em] text-base-black;
+  @apply font-text text-[1.0625rem] leading-tight tracking-[0.0063em] text-base-black dark:text-base-white;
 }
 
 .title-lg {
