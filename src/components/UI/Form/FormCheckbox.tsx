@@ -27,7 +27,7 @@ const FormCheckbox: FC<FormCheckboxProps> = ({
         className="label-checkbox cursor-pointer flex gap-3"
         htmlFor={id}
       >
-        <span className="relative w-5 h-5 rounded-md border border-base-gray-3 transition-colors">
+        <span className="flex-shrink-0 relative w-5 h-5 rounded-md border border-base-gray-3 transition-colors">
           <IconCheck
             className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity"
             size="sm"
