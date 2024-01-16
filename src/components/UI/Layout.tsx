@@ -1,12 +1,12 @@
 import { classnames } from '@/utils'
 import { FC, ReactNode } from 'react'
 
-type ContainerProps = {
+type LayoutProps = {
   children: ReactNode
   className?: string
 }
 
-const Container: FC<ContainerProps> = ({ children, className }) => {
+const Layout: FC<LayoutProps> = ({ children, className }) => {
   return (
     <div className={classnames('px-5 w-full h-full', className)}>
       {children}
@@ -14,4 +14,4 @@ const Container: FC<ContainerProps> = ({ children, className }) => {
   )
 }
 
-export default Container
+export default Layout
