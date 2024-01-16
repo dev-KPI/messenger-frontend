@@ -9,11 +9,11 @@ import FormLabel from '@/components/UI/Form/FormLabel'
 import { FC, FormEvent } from 'react'
 
 const AuthForm: FC = () => {
+  const handleFormSubmit = (e: FormEvent<HTMLFormElement>) =>
+    console.log(e.target)
+
   return (
-    <Form
-      className="mt-5"
-      onSubmit={(e: FormEvent<HTMLFormElement>) => console.log(e.target)}
-    >
+    <Form className="mt-5" onSubmit={handleFormSubmit}>
       <FormControl>
         <FormLabel htmlFor="email">
           Confirm your email and get dynamically generated code
