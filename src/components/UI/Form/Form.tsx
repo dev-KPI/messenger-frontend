@@ -10,13 +10,13 @@ type FormProps = {
 }
 
 const Form: FC<FormProps> = ({ children, className, onSubmit }) => {
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const onSubmitInternal = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     onSubmit(e)
   }
 
   return (
-    <form className={classnames('', className)} onSubmit={handleSubmit}>
+    <form className={classnames('', className)} onSubmit={onSubmitInternal}>
       {children}
     </form>
   )
