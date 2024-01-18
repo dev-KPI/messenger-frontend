@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 
+import Providers from '@/store/Providers'
+
 import { text, title } from './fonts'
 import './globals.css'
 
@@ -14,8 +16,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`${title.variable} ${text.variable}`}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${title.variable} ${text.variable}`}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   )
 }

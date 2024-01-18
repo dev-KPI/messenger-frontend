@@ -5,6 +5,7 @@ type ButtonProps = {
   children: ReactNode
   className?: string
   disabled?: boolean
+  onClick?: () => void
   type?: 'button' | 'reset' | 'submit'
 }
 
@@ -13,7 +14,13 @@ const THEMES = {
   light: 'disabled:bg-none disabled:text-base-gray-4 disabled:bg-base-gray-3',
 }
 
-const Button: FC<ButtonProps> = ({ children, className, disabled, type }) => {
+const Button: FC<ButtonProps> = ({
+  children,
+  className,
+  disabled,
+  onClick,
+  type,
+}) => {
   return (
     <button
       className={classnames(
@@ -22,6 +29,7 @@ const Button: FC<ButtonProps> = ({ children, className, disabled, type }) => {
         className
       )}
       disabled={disabled}
+      onClick={onClick}
       type={type || 'button'}
     >
       {children}
