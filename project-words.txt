@@ -1,13 +1,9 @@
-autobuild
+Autobuild
 GOLUB
 tailwindcss
 tsbuildinfo
 vercel
-roboto
+Roboto
 subheadline
 linecap
 linejoin
-embla
-cmdk
-vaul
-sonner
