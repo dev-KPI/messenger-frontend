@@ -1,11 +1,11 @@
 'use client'
 
-import Button from '@/components/ui/index/Button'
 import Form from '@/ui/form/Form'
 import FormCheckbox from '@/ui/form/FormCheckbox'
 import FormControl from '@/ui/form/FormControl'
 import FormInput from '@/ui/form/FormInput'
 import FormLabel from '@/ui/form/FormLabel'
+import Button from '@/ui/index/Button'
 import { FC, FormEvent } from 'react'
 
 const AuthForm: FC = () => {
