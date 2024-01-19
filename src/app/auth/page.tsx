@@ -1,8 +1,8 @@
-import FormAuth from '@/components/Pages/Auth/FormAuth'
-import ImageCard from '@/components/Pages/Auth/ImageCard'
-import ButtonThemeToggle from '@/components/UI/ButtonThemeToggle'
-import IconGolub from '@/components/UI/Icons/IconGolub'
-import Layout from '@/components/UI/Layout'
+import FormAuth from '@/components/pages/auth/FormAuth'
+import ImageCard from '@/components/pages/auth/ImageCard'
+import ButtonThemeToggle from '@/components/ui/index/ButtonThemeToggle'
+import Layout from '@/components/ui/index/Layout'
+import IconGolub from '@/ui/icons/IconGolub'
 
 export default function Auth() {
   return (
