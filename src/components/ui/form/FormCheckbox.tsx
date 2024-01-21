@@ -1,8 +1,7 @@
+import FormLabel from '@/components/ui/form/FormLabel'
+import IconCheck from '@/components/ui/icons/IconCheck'
 import { classnames } from '@/utils'
 import { FC, InputHTMLAttributes, ReactNode } from 'react'
-
-import IconCheck from '../Icons/IconCheck'
-import FormLabel from './FormLabel'
 
 interface FormCheckboxProps extends InputHTMLAttributes<HTMLInputElement> {
   children: ReactNode

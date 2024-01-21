@@ -5,3 +5,5 @@ tsbuildinfo
 vercel
 Roboto
 subheadline
+linecap
+linejoin
