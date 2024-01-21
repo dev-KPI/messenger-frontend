@@ -1,5 +1,5 @@
-import FormLabel from '@/ui/form/FormLabel'
-import IconCheck from '@/ui/icons/IconCheck'
+import FormLabel from '@/components/ui/form/FormLabel'
+import IconCheck from '@/components/ui/icons/IconCheck'
 import { classnames } from '@/utils'
 import { FC, InputHTMLAttributes, ReactNode } from 'react'
 

@@ -1,4 +1,4 @@
-import IconChange from '@/ui/icons/IconChange'
+import IconChange from '@/components/ui/icons/IconChange'
 import Image from 'next/image'
 
 export default function Home() {
