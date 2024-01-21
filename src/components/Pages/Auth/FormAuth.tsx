@@ -28,9 +28,6 @@ const AuthForm: FC = () => {
       <Button className="mt-3 w-full" type="submit">
         Next
       </Button>
-      {/* <Button className="mt-3 w-full" type="submit">
-        Next
-      </Button> */}
     </Form>
   )
 }
