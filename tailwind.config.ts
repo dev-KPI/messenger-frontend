@@ -27,6 +27,8 @@ const config: Config = {
           'linear-gradient(168deg, rgb(224, 237, 255, 1) 0%, rgba(255, 255, 255, 1) 100%)',
         'gradient-purple-blue':
           'linear-gradient(91deg, rgba(145, 159, 222, 1) 0%, rgba(45, 109, 205, 1) 100%)',
+        'gradient-purple-blue-dark':
+          'linear-gradient(0deg, rgba(38, 39, 44, 0.20) 0%, rgba(38, 39, 44, 0.20) 100%), linear-gradient(91deg, #92A1DE 0%, #2D6DCD 100%);',
       },
       borderRadius: {
         lg: 'var(--radius)',
