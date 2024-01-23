@@ -2,7 +2,7 @@ import FormAuth from '@/components/pages/auth/form-auth'
 import ImageCard from '@/components/pages/auth/image-card'
 import Content from '@/components/ui/content'
 import IconGolub from '@/components/ui/icons/IconGolub'
-import ButtonThemeToggle from '@/components/ui/index/ButtonThemeToggle'
+import ThemeToggler from '@/components/ui/index/theme-toggler'
 
 export default function Auth() {
   return (
@@ -15,7 +15,7 @@ export default function Auth() {
           <div>
             <h1 className="title-lg">Authentication</h1>
             <FormAuth className="mt-5" />
-            <ButtonThemeToggle />
+            <ThemeToggler />
           </div>
         </div>
       </Content>
