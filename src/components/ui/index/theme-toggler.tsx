@@ -1,11 +1,10 @@
 'use client'
 
+import { Button } from '@/components/ui/button'
 import Theme, { THEME } from '@/types/enums/Theme'
 import { useTheme } from 'next-themes'
 
-import Button from './Button'
-
-const ButtonThemeToggle = () => {
+const ThemeToggler = () => {
   const { resolvedTheme, setTheme } = useTheme()
 
   const toggleTheme = () => {
@@ -21,4 +20,4 @@ const ButtonThemeToggle = () => {
   )
 }
 
-export default ButtonThemeToggle
+export default ThemeToggler

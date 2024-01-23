@@ -3,34 +3,25 @@ import { Slot } from '@radix-ui/react-slot'
 import { type VariantProps, cva } from 'class-variance-authority'
 import * as React from 'react'
 
-const buttonVariants = cva(
-  'inline-block text-center text-base-white rounded-2xl bg-gradient-purple-blue',
-  {
-    defaultVariants: {
-      size: 'default',
-      variant: 'default',
+const buttonVariants = cva('overflow-hidden inline-block text-center', {
+  defaultVariants: {
+    size: 'default',
+    variant: 'default',
+  },
+  variants: {
+    size: {
+      default: 'py-3.5 px-5 rounded-2xl',
+      icon: 'py-1 px-2 rounded-lg text-xs',
     },
-    variants: {
-      size: {
-        default: 'py-3.5 px-5',
-        icon: 'h-10 w-10',
-        lg: 'h-11 rounded-md px-8',
-        sm: 'h-9 rounded-md px-3',
-      },
-      variant: {
-        default: 'bg-gradient-purple-blue',
-        destructive:
-          'bg-destructive text-destructive-foreground hover:bg-destructive/90',
-        ghost: 'hover:bg-accent hover:text-accent-foreground',
-        link: 'text-primary underline-offset-4 hover:underline',
-        outline:
-          'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
-        secondary:
-          'bg-secondary text-secondary-foreground hover:bg-secondary/80',
-      },
+    variant: {
+      default:
+        'relative z-0 text-base-white bg-gradient-purple-blue after:absolute after:-z-[1] after:top-0 after:left-0 after:w-full after:h-full after:bg-gradient-purple-blue-dark after:opacity-0 after:transition-opacity hover:after:opacity-100',
+      disabled:
+        'text-base-gray-4 bg-base-gray-3 dark:text-base-gray-8 dark:bg-base-gray-7',
+      icon: 'text-base-gray-8 bg-base-gray-2',
     },
-  }
-)
+  },
+})
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
