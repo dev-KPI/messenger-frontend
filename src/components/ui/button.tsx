@@ -16,7 +16,8 @@ const buttonVariants = cva('overflow-hidden inline-block text-center', {
     variant: {
       default:
         'relative z-0 text-base-white bg-gradient-purple-blue after:absolute after:-z-[1] after:top-0 after:left-0 after:w-full after:h-full after:bg-gradient-purple-blue-dark after:opacity-0 after:transition-opacity hover:after:opacity-100',
-      disabled: 'text-base-gray-4 bg-base-gray-3',
+      disabled:
+        'text-base-gray-4 bg-base-gray-3 dark:text-base-gray-8 dark:bg-base-gray-7',
       icon: 'text-base-gray-8 bg-base-gray-2',
     },
   },
