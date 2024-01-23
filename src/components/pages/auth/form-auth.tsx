@@ -11,17 +11,20 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
+import { classnames } from '@/utils'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { FC } from 'react'
 import { useForm } from 'react-hook-form'
 import * as z from 'zod'
+
+type FormAuthProps = { className?: string }
 
 const formSchema = z.object({
   agreement: z.boolean().default(false),
   email: z.string().email(),
 })
 
-const AuthForm: FC = () => {
+const AuthForm: FC<FormAuthProps> = ({ className }) => {
   const form = useForm<z.infer<typeof formSchema>>({
     defaultValues: {
       agreement: false,
@@ -31,12 +34,16 @@ const AuthForm: FC = () => {
   })
 
   function onSubmit(values: z.infer<typeof formSchema>) {
+    alert(JSON.stringify(values))
     console.log(values)
   }
 
   return (
     <Form {...form}>
-      <form className="space-y-8" onSubmit={form.handleSubmit(onSubmit)}>
+      <form
+        className={classnames('space-y-8', className)}
+        onSubmit={form.handleSubmit(onSubmit)}
+      >
         <FormField
           control={form.control}
           name="email"
