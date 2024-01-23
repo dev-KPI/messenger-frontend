@@ -9,7 +9,16 @@ type ProvidersProps = {
 }
 
 const Providers: FC<ProvidersProps> = ({ children }) => {
-  return <ThemeProvider>{children}</ThemeProvider>
+  return (
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      disableTransitionOnChange
+      enableSystem
+    >
+      {children}
+    </ThemeProvider>
+  )
 }
 
 export default Providers
