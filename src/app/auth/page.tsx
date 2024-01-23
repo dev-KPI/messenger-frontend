@@ -8,13 +8,13 @@ export default function Auth() {
   return (
     <section className="h-screen w-screen bg-gradient-blue-white">
       <Content className="flex items-center justify-center dark:bg-none dark:bg-base-gray-8">
-        <div className="card p-7 sm:p-10 flex gap-7 md:gap-[3.75rem] bg-base-white dark:bg-base-black">
+        <div className="p-7 sm:p-10 flex gap-7 md:gap-[3.75rem] rounded-3xl bg-base-white dark:bg-base-black">
           <ImageCard className="-my-[4.375rem] flex-shrink-0 hidden sm:flex items-center justify-center">
             <IconGolub />
           </ImageCard>
           <div>
             <h1 className="title-lg">Authentication</h1>
-            <FormAuth />
+            <FormAuth className="mt-5" />
             <ButtonThemeToggle />
           </div>
         </div>
