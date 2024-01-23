@@ -1,5 +1,10 @@
-import IconProps from '@/types/interfaces/IconProps'
+import IconSize from '@/types/enums/IconSize'
 import { getIconDimension } from '@/utils'
+import { HTMLAttributes } from 'react'
+
+interface IconProps extends HTMLAttributes<SVGElement> {
+  size?: IconSize
+}
 
 export const Icons = {
   check: ({ size, ...props }: IconProps) => {
