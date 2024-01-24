@@ -1,29 +1,34 @@
-import IconChange from '@/components/ui/icons/IconChange'
-import Image from 'next/image'
+'use client'
 
-export default function Home() {
+import { Button } from '@/components/ui/button'
+import { useToast } from '@/components/ui/use-toast'
+import { useApi, useApiContext } from '@/utils'
+
+const Home = () => {
+  const api = useApiContext()
+  const condition = true
+  const { toast } = useToast()
+
+  const { fetch, response: calculated } = useApi(
+    () => condition && api.example.add({ a: 1, b: 2 }),
+    {
+      onSuccess: () =>
+        toast({
+          title: '🚀 Two numbers added',
+        }),
+    }
+  )
+  const { response: data } = useApi(() => condition && api.example.data(), {
+    autofetch: true,
+  })
+
   return (
-    <div className="flex items-baseline gap-5">
-      <div className="flex flex-col items-center">
-        This is Image:{' '}
-        <Image
-          alt="change"
-          className="fill-blue-500"
-          height={24}
-          src="/icons/change.svg"
-          width={24}
-        />
-      </div>
-      <div className="flex flex-col items-center">
-        This is an IconChange component:{' '}
-        <IconChange
-          className="text-base-gray-1 hover:text-bright-orange transition-colors"
-          size="lg"
-        />
-        <p>Hover me!</p>
-      </div>
-      <div>GOLUB</div>
-      <div>🚀</div>
+    <div className="flex items-center justify-center w-screen h-screen gap-20 text-white">
+      <div>{data}</div>
+      <Button onClick={fetch}>Calculate 1 + 2</Button>
+      {calculated}
     </div>
   )
 }
+
+export default Home
