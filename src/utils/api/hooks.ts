@@ -1,3 +1,5 @@
+'use client'
+
 import { useToast } from '@/components/ui/use-toast'
 import { useCallback, useEffect, useRef, useState } from 'react'
 

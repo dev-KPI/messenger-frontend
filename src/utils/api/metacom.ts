@@ -1,3 +1,5 @@
+'use client'
+
 import { useToast } from '@/components/ui/use-toast'
 import { URL_PRODUCT_API } from '@/constants'
 import { Metacom } from 'metacom'
