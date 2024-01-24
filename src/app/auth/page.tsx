@@ -13,11 +13,11 @@ export default function Auth() {
             <Icons.golub />
           </ImageCard>
           <div>
-            <h1 className="title-lg">Authentication</h1>
-            <FormAuth className="mt-5" />
-            <div className="mt-5">
+            <div className="flex justify-between pb-2">
+              <h1 className="title-lg">Authentication</h1>
               <ModeToggle />
             </div>
+            <FormAuth className="mt-5" />
           </div>
         </div>
       </Content>
