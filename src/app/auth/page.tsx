@@ -2,7 +2,7 @@ import FormAuth from '@/components/pages/auth/form-auth'
 import ImageCard from '@/components/pages/auth/image-card'
 import Content from '@/components/ui/content'
 import { Icons } from '@/components/ui/icons'
-import ThemeToggler from '@/components/ui/index/theme-toggler'
+import { ModeToggle } from '@/components/ui/theme-toggler'
 
 export default function Auth() {
   return (
@@ -15,7 +15,9 @@ export default function Auth() {
           <div>
             <h1 className="title-lg">Authentication</h1>
             <FormAuth className="mt-5" />
-            <ThemeToggler />
+            <div className="mt-5">
+              <ModeToggle />
+            </div>
           </div>
         </div>
       </Content>
