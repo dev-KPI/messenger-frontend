@@ -2,7 +2,7 @@ import FormAuth from '@/components/pages/auth/form-auth'
 import ImageCard from '@/components/pages/auth/image-card'
 import Content from '@/components/ui/content'
 import { Icons } from '@/components/ui/icons'
-import ThemeToggler from '@/components/ui/index/theme-toggler'
+import { ThemeToggler } from '@/components/ui/theme-toggler'
 
 export default function Auth() {
   return (
@@ -13,9 +13,11 @@ export default function Auth() {
             <Icons.golub />
           </ImageCard>
           <div>
-            <h1 className="title-lg">Authentication</h1>
+            <div className="flex justify-between pb-2">
+              <h1 className="title-lg">Authentication</h1>
+              <ThemeToggler />
+            </div>
             <FormAuth className="mt-5" />
-            <ThemeToggler />
           </div>
         </div>
       </Content>

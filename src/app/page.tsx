@@ -1,8 +1,8 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
-import { useToast } from '@/components/ui/use-toast'
-import { useApi, useApiContext } from '@/utils'
+import { useApi, useToast } from '@/hooks'
+import { useApiContext } from '@/utils'
 
 const Home = () => {
   const api = useApiContext()
@@ -23,7 +23,7 @@ const Home = () => {
   })
 
   return (
-    <div className="flex items-center justify-center w-screen h-screen gap-20 text-white">
+    <div className="flex items-center justify-center w-screen h-screen gap-20 text-black dark:text-white">
       <div>{data}</div>
       <Button onClick={fetch}>Calculate 1 + 2</Button>
       {calculated}
