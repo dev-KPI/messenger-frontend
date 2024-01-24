@@ -1,8 +1,7 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
-import { useApi } from '@/hooks/use-api'
-import { useToast } from '@/hooks/use-toast'
+import { useApi, useToast } from '@/hooks'
 import { useApiContext } from '@/utils'
 
 const Home = () => {

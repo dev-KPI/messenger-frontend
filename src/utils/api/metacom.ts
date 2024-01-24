@@ -1,7 +1,7 @@
 'use client'
 
 import { URL_PRODUCT_API } from '@/constants'
-import { useToast } from '@/hooks/use-toast'
+import { useToast } from '@/hooks'
 import { Metacom } from 'metacom'
 import {
   createContext,
