@@ -1,6 +1,6 @@
 'use client'
 
-import { useToast } from '@/utils/api/hooks/use-toast'
+import { useToast } from '@/hooks/use-toast'
 import { useCallback, useEffect, useRef, useState } from 'react'
 
 export const useApi = <T extends Promise<any>>(

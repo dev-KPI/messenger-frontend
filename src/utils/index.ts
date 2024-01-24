@@ -1,2 +1,2 @@
-export * from './misc'
-export * from './api'
+export * from '@/utils/misc'
+export * from '@/utils/api'
