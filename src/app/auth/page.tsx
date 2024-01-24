@@ -2,7 +2,7 @@ import FormAuth from '@/components/pages/auth/form-auth'
 import ImageCard from '@/components/pages/auth/image-card'
 import Content from '@/components/ui/content'
 import { Icons } from '@/components/ui/icons'
-import { ModeToggle } from '@/components/ui/theme-toggler'
+import { ThemeToggler } from '@/components/ui/theme-toggler'
 
 export default function Auth() {
   return (
@@ -15,7 +15,7 @@ export default function Auth() {
           <div>
             <div className="flex justify-between pb-2">
               <h1 className="title-lg">Authentication</h1>
-              <ModeToggle />
+              <ThemeToggler />
             </div>
             <FormAuth className="mt-5" />
           </div>
