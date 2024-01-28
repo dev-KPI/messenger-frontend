@@ -8,3 +8,7 @@ export const getIconDimension = (size?: IconSize) => {
   if (size) return ICON_SIZE[size]
   return ICON_SIZE['md']
 }
+
+export const isNumeric = (value: string) => {
+  return !isNaN(parseInt(value, 10))
+}
