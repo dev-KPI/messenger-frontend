@@ -28,11 +28,9 @@ export function ThemeToggler() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setLightTheme}>Light</DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setDarkTheme}>Dark</DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setSystemTheme}>
-          System
-        </DropdownMenuItem>
+        <DropdownMenuItem onClick={setLightTheme}>Light</DropdownMenuItem>
+        <DropdownMenuItem onClick={setDarkTheme}>Dark</DropdownMenuItem>
+        <DropdownMenuItem onClick={setSystemTheme}>System</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   )
