@@ -9,7 +9,7 @@ export default function Auth() {
     <section className="h-screen w-screen bg-gradient-blue-white">
       <Content className="flex items-center justify-center dark:bg-none dark:bg-base-gray-8">
         <div className="p-7 sm:p-10 flex gap-7 md:gap-[3.75rem] rounded-3xl bg-base-white dark:bg-base-black">
-          <ImageCard className="-my-[4.375rem] flex-shrink-0 hidden sm:flex items-center justify-center">
+          <ImageCard className="-my-[4.375rem] flex-shrink-0 hidden sm:flex items-center justify-center pt-24 pr-8 pb-36 pl-5">
             <Icons.golub />
           </ImageCard>
           <div>
