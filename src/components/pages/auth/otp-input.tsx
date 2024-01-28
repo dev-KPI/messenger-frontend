@@ -39,15 +39,15 @@ const OtpInput: FC<OtpInputProps> = ({
 
   const focusNext = (target: HTMLInputElement) => {
     const { nextElementSibling } = target
-    if (nextElementSibling) {
-      ;(nextElementSibling as HTMLInputElement).focus()
+    if (nextElementSibling instanceof HTMLInputElement) {
+      nextElementSibling.focus()
     }
   }
 
   const focusPrev = (target: HTMLInputElement) => {
     const { previousElementSibling } = target
-    if (previousElementSibling) {
-      ;(previousElementSibling as HTMLInputElement).focus()
+    if (previousElementSibling instanceof HTMLInputElement) {
+      previousElementSibling.focus()
     }
   }
 
@@ -67,8 +67,8 @@ const OtpInput: FC<OtpInputProps> = ({
 
     if (
       !isTargetValueDigit &&
-      nextElementSibling &&
-      (nextElementSibling as HTMLInputElement).value !== ''
+      nextElementSibling instanceof HTMLInputElement &&
+      nextElementSibling.value !== ''
     ) {
       return
     }
@@ -98,25 +98,28 @@ const OtpInput: FC<OtpInputProps> = ({
 
   const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
     const { key, target } = e
-    const { value } = target as HTMLInputElement
 
-    if (key === 'ArrowRight' || key === 'ArrowDown') {
-      e.preventDefault()
-      return focusNext(target as HTMLInputElement)
+    if (target instanceof HTMLInputElement) {
+      const { value } = target
+
+      if (key === 'ArrowRight' || key === 'ArrowDown') {
+        e.preventDefault()
+        return focusNext(target)
+      }
+
+      if (key === 'ArrowLeft' || key === 'ArrowUp') {
+        e.preventDefault()
+        return focusPrev(target)
+      }
+
+      target.setSelectionRange(0, value.length)
+
+      if (key !== 'Backspace' || value !== '') {
+        return
+      }
+
+      focusPrev(target)
     }
-
-    if (key === 'ArrowLeft' || key === 'ArrowUp') {
-      e.preventDefault()
-      return focusPrev(target as HTMLInputElement)
-    }
-
-    ;(target as HTMLInputElement).setSelectionRange(0, value.length)
-
-    if (key !== 'Backspace' || value !== '') {
-      return
-    }
-
-    focusPrev(target as HTMLInputElement)
   }
 
   const handleFocus = (e: FocusEvent<HTMLInputElement>) => {
@@ -124,10 +127,10 @@ const OtpInput: FC<OtpInputProps> = ({
     const { previousElementSibling, value } = target
 
     if (
-      previousElementSibling &&
-      (previousElementSibling as HTMLInputElement).value === ''
+      previousElementSibling instanceof HTMLInputElement &&
+      previousElementSibling.value === ''
     ) {
-      return (previousElementSibling as HTMLInputElement).focus()
+      return previousElementSibling.focus()
     }
 
     target.setSelectionRange(0, value.length)
