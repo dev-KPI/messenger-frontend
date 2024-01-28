@@ -1,5 +1,6 @@
 'use client'
 
+import OtpInput from '@/components/pages/auth/otp-input'
 import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
 import {
@@ -13,7 +14,7 @@ import {
 import { Input } from '@/components/ui/input'
 import { classnames } from '@/utils'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import * as z from 'zod'
 
@@ -25,6 +26,8 @@ const formSchema = z.object({
 })
 
 const AuthForm: FC<FormAuthProps> = ({ className }) => {
+  const [otp, setOtp] = useState<string>('')
+
   const form = useForm<z.infer<typeof formSchema>>({
     defaultValues: {
       agreement: false,
@@ -33,8 +36,10 @@ const AuthForm: FC<FormAuthProps> = ({ className }) => {
     resolver: zodResolver(formSchema),
   })
 
+  const otpChange = (value: string) => setOtp(value.trim())
+
   function onSubmit(values: z.infer<typeof formSchema>) {
-    alert(JSON.stringify(values))
+    alert(JSON.stringify({ ...values, otp }))
     console.log(values)
   }
 
@@ -59,6 +64,7 @@ const AuthForm: FC<FormAuthProps> = ({ className }) => {
             </FormItem>
           )}
         />
+        <OtpInput length={5} onChange={otpChange} otpValue={otp} />
         <FormField
           control={form.control}
           name="agreement"
