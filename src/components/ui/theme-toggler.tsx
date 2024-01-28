@@ -14,9 +14,9 @@ import * as React from 'react'
 export function ThemeToggler() {
   const { setTheme } = useTheme()
 
-  const setLightTheme = () => setTheme('light')
-  const setDarkTheme = () => setTheme('dark')
-  const setSystemTheme = () => setTheme('system')
+  const setThemeLight = () => setTheme('light')
+  const setThemeDark = () => setTheme('dark')
+  const setThemeSystem = () => setTheme('system')
 
   return (
     <DropdownMenu>
@@ -28,9 +28,9 @@ export function ThemeToggler() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={setLightTheme}>Light</DropdownMenuItem>
-        <DropdownMenuItem onClick={setDarkTheme}>Dark</DropdownMenuItem>
-        <DropdownMenuItem onClick={setSystemTheme}>System</DropdownMenuItem>
+        <DropdownMenuItem onClick={setThemeLight}>Light</DropdownMenuItem>
+        <DropdownMenuItem onClick={setThemeDark}>Dark</DropdownMenuItem>
+        <DropdownMenuItem onClick={setThemeSystem}>System</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   )
