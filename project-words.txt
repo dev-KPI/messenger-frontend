@@ -9,3 +9,4 @@ subheadline
 linecap
 linejoin
 mingcute
+shadcn
