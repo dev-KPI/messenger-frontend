@@ -12,6 +12,7 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
+import { LENGTH_OTP } from '@/constants'
 import { classnames } from '@/utils'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { FC, useState } from 'react'
@@ -64,7 +65,7 @@ const AuthForm: FC<FormAuthProps> = ({ className }) => {
             </FormItem>
           )}
         />
-        <OtpInput length={5} onChange={otpChange} otpValue={otp} />
+        <OtpInput length={LENGTH_OTP} onChange={otpChange} otpValue={otp} />
         <FormField
           control={form.control}
           name="agreement"

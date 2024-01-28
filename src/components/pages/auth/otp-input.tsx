@@ -1,6 +1,6 @@
 import { Input } from '@/components/ui/input'
-import { DIGIT_RE } from '@/constants'
 import { cn } from '@/lib/utils'
+import { isNumeric } from '@/utils'
 import { ChangeEvent, FC, FocusEvent, KeyboardEvent, useMemo } from 'react'
 
 type OtpInputProps = {
@@ -17,7 +17,7 @@ const getOtpDigits = (otp: string, length: number) => {
 
   for (let i = 0; i < length; i++) {
     const element = otpItems[i]
-    const elementIsDigit = DIGIT_RE.test(element)
+    const elementIsDigit = isNumeric(element)
 
     digitsArray.push(elementIsDigit ? element : '')
   }
@@ -59,7 +59,7 @@ const OtpInput: FC<OtpInputProps> = ({
     const { nextElementSibling } = target
     let targetValue = target.value.trim()
 
-    const isTargetValueDigit = DIGIT_RE.test(targetValue)
+    const isTargetValueDigit = isNumeric(targetValue)
 
     if (!isTargetValueDigit && targetValue !== '') {
       return
