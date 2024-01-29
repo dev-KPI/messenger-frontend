@@ -33,7 +33,9 @@ const FileInput: FC<FileInputProps> = ({ className }) => {
     setImage(file)
 
     const fileReader = new FileReader()
+
     fileReader.readAsDataURL(file)
+
     fileReader.onloadstart = () => {
       setProgress(0)
     }
