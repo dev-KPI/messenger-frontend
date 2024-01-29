@@ -1,6 +1,5 @@
 'use client'
 
-import ImageCard from '@/components/pages/auth/image-card'
 import { Icons } from '@/components/ui/icons'
 import { Progress } from '@/components/ui/progress'
 import { PROGRESS_TIMEOUT_DELAY } from '@/constants'
@@ -59,59 +58,50 @@ const FileInput: FC<FileInputProps> = ({ className }) => {
   }
 
   return (
-    <ImageCard
-      className={cn(
-        '-my-[4.375rem] flex-shrink-0 hidden sm:flex items-center justify-center py-32 px-[3.25rem]',
-        className
-      )}
-    >
-      <div className="relative">
-        {preview ? (
-          <div>
-            <Image
-              alt="avatar"
-              className="w-[144px] h-[144px] rounded-3xl"
-              src={preview}
-            />
-            <Icons.cross
-              className="absolute z-10 top-4 right-4 text-base-white dark:text-base-black"
-              onClick={clearSelectFile}
-            />
+    <div className={cn('relative', className)}>
+      {preview ? (
+        <div>
+          <div className="relative w-[144px] h-[144px] overflow-hidden rounded-3xl">
+            <Image alt="avatar" fill src={preview} />
           </div>
-        ) : (
-          <div>
-            <Icons.photo_profile className="text-base-gray-2 dark:text-base-black" />
-          </div>
-        )}
-        <div
-          className="absolute -bottom-4 right-1/2 translate-x-1/2"
-          onClick={handleSelectFile}
-        >
-          <Icons.mingcute_camera className="text-white dark:text-bright-indigo" />
-        </div>
-
-        <div
-          className={cn(
-            'absolute z-[11] top-1/2 left-1/2 w-full',
-            !progress && 'w-0'
-          )}
-        >
-          <Progress
-            className="w-5/6 relative mx-auto transition-[width] duration-500 ease-in-out -left-1/2"
-            value={progress}
+          <Icons.cross
+            className="absolute z-10 top-4 right-4 text-base-white dark:text-base-black"
+            onClick={clearSelectFile}
           />
         </div>
-
-        <input
-          className="absolute block h-full w-full top-0 opacity-0 rounded-3xl"
-          name="image"
-          onChange={handleImageChange}
-          ref={fileInputRef}
-          type="file"
-        />
-        <span className="sr-only">File input</span>
+      ) : (
+        <div>
+          <Icons.photo_profile className="text-base-gray-2 dark:text-base-black" />
+        </div>
+      )}
+      <div
+        className="absolute -bottom-4 right-1/2 translate-x-1/2"
+        onClick={handleSelectFile}
+      >
+        <Icons.mingcute_camera className="text-white dark:text-bright-indigo" />
       </div>
-    </ImageCard>
+
+      <div
+        className={cn(
+          'absolute z-[11] top-1/2 left-1/2 w-full',
+          !progress && 'w-0'
+        )}
+      >
+        <Progress
+          className="w-5/6 relative mx-auto transition-[width] duration-500 ease-in-out -left-1/2"
+          value={progress}
+        />
+      </div>
+
+      <input
+        className="absolute block h-full w-full top-0 opacity-0 rounded-3xl"
+        name="image"
+        onChange={handleImageChange}
+        ref={fileInputRef}
+        type="file"
+      />
+      <span className="sr-only">File input</span>
+    </div>
   )
 }
 
