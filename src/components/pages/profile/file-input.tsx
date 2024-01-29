@@ -5,6 +5,7 @@ import { Icons } from '@/components/ui/icons'
 import { Progress } from '@/components/ui/progress'
 import { PROGRESS_TIMEOUT_DELAY } from '@/constants'
 import { cn } from '@/lib/utils'
+import Image from 'next/image'
 import { FC, FormEvent, useRef, useState } from 'react'
 
 type FileInputProps = {
@@ -32,17 +33,13 @@ const FileInput: FC<FileInputProps> = ({ className }) => {
     setImage(file)
 
     const fileReader = new FileReader()
-
     fileReader.readAsDataURL(file)
-
     fileReader.onloadstart = () => {
       setProgress(0)
     }
-
     fileReader.onprogress = (progress) => {
       setProgress((progress.loaded / progress.total) * 100)
     }
-
     fileReader.onload = () => {
       setPreview(fileReader.result as string)
       setTimeout(() => setProgress(0), PROGRESS_TIMEOUT_DELAY)
@@ -69,7 +66,11 @@ const FileInput: FC<FileInputProps> = ({ className }) => {
       <div className="relative">
         {preview ? (
           <div>
-            <img className="w-[144px] h-[144px] rounded-3xl" src={preview} />
+            <Image
+              alt="avatar"
+              className="w-[144px] h-[144px] rounded-3xl"
+              src={preview}
+            />
             <Icons.cross
               className="absolute z-10 top-4 right-4 text-base-white dark:text-base-black"
               onClick={clearSelectFile}
