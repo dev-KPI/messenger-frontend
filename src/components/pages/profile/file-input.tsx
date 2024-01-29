@@ -2,7 +2,8 @@
 
 import ImageCard from '@/components/pages/auth/image-card'
 import { Icons } from '@/components/ui/icons'
-import { classnames } from '@/utils'
+import { Progress } from '@/components/ui/progress'
+import { cn } from '@/lib/utils'
 import { FC, FormEvent, useRef, useState } from 'react'
 
 type FileInputProps = {
@@ -16,11 +17,13 @@ const FileInput: FC<FileInputProps> = ({ className }) => {
 
   const [preview, setPreview] = useState<string | undefined>()
 
-  function clearSelectFile() {
+  const [progress, setProgress] = useState<number>(0)
+
+  const clearSelectFile = () => {
     setPreview(undefined)
   }
 
-  function handleSelectFile() {
+  const handleSelectFile = () => {
     fileInputRef.current?.click()
   }
 
@@ -31,17 +34,21 @@ const FileInput: FC<FileInputProps> = ({ className }) => {
 
     fileReader.readAsDataURL(file)
 
-    // TODO: implement shadcn/ui progress component on image upload
-    // fileReader.onprogress = (progress) => {
-    //   console.log('progress', progress)
-    // }
+    fileReader.onloadstart = () => {
+      setProgress(0)
+    }
+
+    fileReader.onprogress = (progress) => {
+      setProgress((progress.loaded / progress.total) * 100)
+    }
 
     fileReader.onload = () => {
       setPreview(fileReader.result as string)
+      setTimeout(() => setProgress(0), 500)
     }
   }
 
-  function handleImageChange(event: FormEvent<HTMLInputElement>) {
+  const handleImageChange = (event: FormEvent<HTMLInputElement>) => {
     const target = event.target as HTMLElement & {
       files: FileList
     }
@@ -53,7 +60,7 @@ const FileInput: FC<FileInputProps> = ({ className }) => {
 
   return (
     <ImageCard
-      className={classnames(
+      className={cn(
         '-my-[4.375rem] flex-shrink-0 hidden sm:flex items-center justify-center py-32 px-[3.25rem]',
         className
       )}
@@ -77,6 +84,18 @@ const FileInput: FC<FileInputProps> = ({ className }) => {
           onClick={handleSelectFile}
         >
           <Icons.mingcute_camera className="fill-white dark:fill-[#7F92DC]" />
+        </div>
+
+        <div
+          className={cn(
+            'absolute z-[11] top-1/2 left-1/2 w-full',
+            !progress && 'w-0'
+          )}
+        >
+          <Progress
+            className="w-5/6 relative mx-auto transition-[width] duration-500 ease-in-out -left-1/2"
+            value={progress}
+          />
         </div>
 
         <input
