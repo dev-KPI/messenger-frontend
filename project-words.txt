@@ -8,4 +8,6 @@ Roboto
 subheadline
 linecap
 linejoin
+mingcute
+shadcn
 clsx
