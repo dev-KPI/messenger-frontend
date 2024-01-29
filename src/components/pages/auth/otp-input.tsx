@@ -147,7 +147,6 @@ const OtpInput: FC<OtpInputProps> = ({
           )}
           inputMode="numeric"
           key={index + 1}
-          maxLength={length}
           onChange={(e) => onChangeInternal(e, index)}
           onFocus={handleFocus}
           onKeyDown={handleKeyDown}
