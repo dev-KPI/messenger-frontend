@@ -10,3 +10,4 @@ linecap
 linejoin
 mingcute
 shadcn
+clsx
