@@ -1,1 +1,2 @@
 export const PROFILE_NAME_LENGTH = 1
+export const PROGRESS_TIMEOUT_DELAY = 500

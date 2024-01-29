@@ -3,6 +3,7 @@
 import ImageCard from '@/components/pages/auth/image-card'
 import { Icons } from '@/components/ui/icons'
 import { Progress } from '@/components/ui/progress'
+import { PROGRESS_TIMEOUT_DELAY } from '@/constants'
 import { cn } from '@/lib/utils'
 import { FC, FormEvent, useRef, useState } from 'react'
 
@@ -44,7 +45,7 @@ const FileInput: FC<FileInputProps> = ({ className }) => {
 
     fileReader.onload = () => {
       setPreview(fileReader.result as string)
-      setTimeout(() => setProgress(0), 500)
+      setTimeout(() => setProgress(0), PROGRESS_TIMEOUT_DELAY)
     }
   }
 
