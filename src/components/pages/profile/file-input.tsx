@@ -70,20 +70,20 @@ const FileInput: FC<FileInputProps> = ({ className }) => {
           <div>
             <img className="w-[144px] h-[144px] rounded-3xl" src={preview} />
             <Icons.cross
-              className="absolute z-10 top-4 right-4 fill-[#F0F2F8] dark:fill-[#1C1D1F]"
+              className="absolute z-10 top-4 right-4 text-base-white dark:text-base-black"
               onClick={clearSelectFile}
             />
           </div>
         ) : (
           <div>
-            <Icons.photo_profile className="fill-[#F0F2F8] dark:fill-[#1C1D1F]" />
+            <Icons.photo_profile className="text-base-gray-2 dark:text-base-black" />
           </div>
         )}
         <div
           className="absolute -bottom-4 right-1/2 translate-x-1/2"
           onClick={handleSelectFile}
         >
-          <Icons.mingcute_camera className="fill-white dark:fill-[#7F92DC]" />
+          <Icons.mingcute_camera className="text-white dark:text-bright-indigo" />
         </div>
 
         <div
