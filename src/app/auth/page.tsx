@@ -1,7 +1,7 @@
 import FormAuth from '@/components/pages/auth/form-auth'
-import ImageCard from '@/components/pages/auth/image-card'
 import Content from '@/components/ui/content'
 import { Icons } from '@/components/ui/icons'
+import ImageCard from '@/components/ui/image-card'
 import { ThemeToggler } from '@/components/ui/theme-toggler'
 
 export default function Auth() {

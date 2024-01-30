@@ -1,7 +1,7 @@
-import ImageCard from '@/components/pages/auth/image-card'
 import FileInput from '@/components/pages/profile/file-input'
 import FormProfile from '@/components/pages/profile/form-profile'
 import Content from '@/components/ui/content'
+import ImageCard from '@/components/ui/image-card'
 import { ThemeToggler } from '@/components/ui/theme-toggler'
 
 export default function Profile() {
