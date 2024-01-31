@@ -14,7 +14,9 @@ const Layout: FC<PageProps> = ({ children } = { children: [] }) => {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${title.variable} ${text.variable}`}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <main>{children}</main>
+        </Providers>
         <Toaster />
       </body>
     </html>

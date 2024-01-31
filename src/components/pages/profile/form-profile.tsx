@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { PROFILE_NAME_LENGTH } from '@/constants'
-import { classnames } from '@/utils'
+import { cn } from '@/lib/utils'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { FC } from 'react'
 import { useForm } from 'react-hook-form'
@@ -40,7 +40,7 @@ const ProfileForm: FC<FormProfileProps> = ({ className }) => {
   return (
     <Form {...form}>
       <form
-        className={classnames('space-y-8 pr-[9.75rem]', className)}
+        className={cn('space-y-8 pr-[9.75rem]', className)}
         onSubmit={form.handleSubmit(onSubmit)}
       >
         <FormField

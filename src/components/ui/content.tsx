@@ -1,4 +1,4 @@
-import { classnames } from '@/utils'
+import { cn } from '@/lib/utils'
 import { FC, ReactNode } from 'react'
 
 type ContentProps = {
@@ -7,11 +7,7 @@ type ContentProps = {
 }
 
 const Content: FC<ContentProps> = ({ children, className }) => {
-  return (
-    <div className={classnames('px-5 w-full h-full', className)}>
-      {children}
-    </div>
-  )
+  return <div className={cn('px-5 w-full h-full', className)}>{children}</div>
 }
 
 export default Content
