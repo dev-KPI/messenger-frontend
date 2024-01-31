@@ -142,7 +142,7 @@ const OtpInput: FC<OtpInputProps> = ({
         <Input
           autoComplete="one-time-code"
           className={cn(
-            'max-w-[3.5rem] text-center font-title py-5 text-[1.75rem] leading-[2.125rem] focus:border-bright-blue font-medium tracking-[0.0225rem]',
+            'flex-shrink-0 max-w-[3.5rem] text-center font-title py-5 text-[1.75rem] leading-[2.125rem] focus:border-bright-blue font-medium tracking-[0.0225rem]',
             isError && 'text-bright-red'
           )}
           inputMode="numeric"
