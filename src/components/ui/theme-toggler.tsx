@@ -22,8 +22,8 @@ export function ThemeToggler() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button size="theme_icon" variant="outline">
-          <Icons.sun className="scale-100 dark:scale-0" />
-          <Icons.moon className="absolute scale-0 dark:scale-100" />
+          <Icons.sun className="dark:absolute scale-100 dark:scale-0" />
+          <Icons.moon className="absolute dark:static scale-0 dark:scale-100" />
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
