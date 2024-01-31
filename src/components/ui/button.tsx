@@ -21,7 +21,7 @@ const buttonVariants = cva('overflow-hidden inline-block text-center', {
         'text-base-gray-4 bg-base-gray-3 dark:text-base-gray-8 dark:bg-base-gray-7',
       icon: 'text-base-gray-8 bg-base-gray-2',
       outline:
-        'border border-input bg-background hover:bg-accent hover:text-accent-foreground inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+        'border border-base-gray-3 text-base-gray-9 dark:border-base-gray-4 dark:text-base-gray-4 hover:bg-base-gray-1 dark:hover:bg-base-gray-9',
     },
   },
 })
