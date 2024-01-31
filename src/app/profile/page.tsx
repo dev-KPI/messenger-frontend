@@ -7,7 +7,7 @@ import { ThemeToggler } from '@/components/ui/theme-toggler'
 export default function Profile() {
   return (
     <AuthContent>
-      <ImageCard className="-my-[4.375rem] flex-shrink-0 hidden sm:flex py-32 px-[3.25rem]">
+      <ImageCard className="-my-[4.375rem] hidden sm:flex py-32 px-[3.25rem]">
         <FileInput />
       </ImageCard>
       <article>

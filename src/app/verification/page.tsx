@@ -7,7 +7,7 @@ import { ThemeToggler } from '@/components/ui/theme-toggler'
 export default function Verification() {
   return (
     <AuthContent>
-      <ImageCard className="-my-[4.375rem] flex-shrink-0 hidden sm:flex pt-24 pr-8 pb-36 pl-5">
+      <ImageCard className="-my-[4.375rem] hidden sm:flex">
         <Icons.golub />
       </ImageCard>
       <article>
