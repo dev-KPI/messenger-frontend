@@ -11,8 +11,7 @@ const buttonVariants = cva('overflow-hidden inline-block text-center', {
   variants: {
     size: {
       default: 'py-3.5 px-5 rounded-2xl',
-      icon: 'py-1 px-2 rounded-lg text-xs',
-      theme_icon: 'p-[0.1875rem] rounded-lg',
+      icon: 'p-[0.1875rem] rounded-lg text-xs',
     },
     variant: {
       default:
