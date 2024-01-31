@@ -12,7 +12,7 @@ const buttonVariants = cva('overflow-hidden inline-block text-center', {
     size: {
       default: 'py-3.5 px-5 rounded-2xl',
       icon: 'py-1 px-2 rounded-lg text-xs',
-      theme_icon: 'h-10 w-10',
+      theme_icon: 'p-[0.1875rem] rounded-lg',
     },
     variant: {
       default:
