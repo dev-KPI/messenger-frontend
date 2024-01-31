@@ -2,12 +2,12 @@ import Content from '@/components/ui/content'
 import { cn } from '@/lib/utils'
 import { FC, ReactNode } from 'react'
 
-type AuthContainerProps = {
+type AuthContentProps = {
   children: ReactNode
   className?: string
 }
 
-const AuthContainer: FC<AuthContainerProps> = ({ children, className }) => {
+const AuthContent: FC<AuthContentProps> = ({ children, className }) => {
   return (
     <div className={cn('h-screen w-screen bg-gradient-blue-white', className)}>
       <Content className="flex items-center justify-center dark:bg-none dark:bg-base-gray-8">
@@ -19,4 +19,4 @@ const AuthContainer: FC<AuthContainerProps> = ({ children, className }) => {
   )
 }
 
-export default AuthContainer
+export default AuthContent
