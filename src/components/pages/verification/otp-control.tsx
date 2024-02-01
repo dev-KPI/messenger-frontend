@@ -6,11 +6,11 @@ import { LENGTH_OTP } from '@/constants'
 import { cn } from '@/lib/utils'
 import { FC, useState } from 'react'
 
-type ControlOtpProps = { className?: string }
+type OtpControlProps = { className?: string }
 
 const MOCK_OTP = '12345' // TODO: remove
 
-const ControlOtp: FC<ControlOtpProps> = ({ className }) => {
+const OtpControl: FC<OtpControlProps> = ({ className }) => {
   const [otp, setOtp] = useState<string>('')
   const [otpIsInvalid, setOtpIsInvalid] = useState<boolean>(false)
 
@@ -66,4 +66,4 @@ const ControlOtp: FC<ControlOtpProps> = ({ className }) => {
   )
 }
 
-export default ControlOtp
+export default OtpControl
