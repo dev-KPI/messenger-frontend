@@ -1,6 +1,6 @@
 import AuthContent from '@/components/pages/auth-content'
 import FileInput from '@/components/pages/profile/file-input'
-import FormProfile from '@/components/pages/profile/form-profile'
+import ProfileForm from '@/components/pages/profile/profile-form'
 import ImageCard from '@/components/ui/image-card'
 import { ThemeToggler } from '@/components/ui/theme-toggler'
 
@@ -15,7 +15,7 @@ export default function Profile() {
           <h1 className="title-lg">Profile</h1>
           <ThemeToggler />
         </header>
-        <FormProfile className="mt-5" />
+        <ProfileForm className="mt-5" />
       </article>
     </AuthContent>
   )

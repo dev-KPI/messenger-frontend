@@ -1,4 +1,4 @@
-import FormAuth from '@/components/pages/auth/form-auth'
+import AuthForm from '@/components/pages/auth/auth-form'
 import AuthContent from '@/components/pages/auth-content'
 import { Icons } from '@/components/ui/icons'
 import ImageCard from '@/components/ui/image-card'
@@ -15,7 +15,7 @@ export default function Auth() {
           <h1 className="title-lg">Authentication</h1>
           <ThemeToggler />
         </header>
-        <FormAuth className="mt-5" />
+        <AuthForm className="mt-5" />
       </article>
     </AuthContent>
   )
