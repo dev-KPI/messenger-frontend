@@ -63,7 +63,7 @@ const AuthForm: FC<FormAuthProps> = ({ className }) => {
           control={form.control}
           name="agreement"
           render={({ field }) => (
-            <FormItem className="flex flex-row items-start space-x-3">
+            <FormItem className="flex flex-row items-start space-x-3 pb-2 pt-8 xs:py-5 xs:pb-0 md:py-0">
               <FormControl>
                 <Checkbox
                   checked={field.value}
@@ -80,7 +80,7 @@ const AuthForm: FC<FormAuthProps> = ({ className }) => {
             </FormItem>
           )}
         />
-        <Button className="!mt-3 w-full" type="submit">
+        <Button className="!mt-8 w-full md:!mt-3" type="submit">
           Submit
         </Button>
       </form>
