@@ -6,14 +6,16 @@ import { ThemeToggler } from '@/components/ui/theme-toggler'
 
 export default function Auth() {
   return (
-    <AuthContent>
-      <ImageCard className="-my-[4.375rem] hidden sm:flex">
+    <AuthContent className="pt-24">
+      <ImageCard className="-my-[4.375rem] hidden md:flex">
         <Icons.golub />
       </ImageCard>
       <article>
         <header className="flex justify-between pb-2">
           <h1 className="title-lg">Authentication</h1>
-          <ThemeToggler />
+          <div className="hidden xs:block">
+            <ThemeToggler />
+          </div>
         </header>
         <AuthForm className="mt-5" />
       </article>

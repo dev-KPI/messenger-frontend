@@ -6,16 +6,21 @@ import { ThemeToggler } from '@/components/ui/theme-toggler'
 
 export default function Verification() {
   return (
-    <AuthContent>
-      <ImageCard className="-my-[4.375rem] hidden sm:flex">
+    <AuthContent className="*:*:flex-col md:*:*:flex-row">
+      <ImageCard className="bg-none px-0 pb-[0.625rem] pt-10 md:hidden">
+        <Icons.messages />
+      </ImageCard>
+      <ImageCard className="-my-[4.375rem] hidden md:flex">
         <Icons.golub />
       </ImageCard>
       <article>
-        <header className="flex justify-between items-center">
+        <header className="flex justify-center items-center md:justify-between">
           <h1 className="title-lg">Check your Email</h1>
-          <ThemeToggler />
+          <div className="hidden md:block">
+            <ThemeToggler />
+          </div>
         </header>
-        <OtpControl className="mt-5" />
+        <OtpControl />
       </article>
     </AuthContent>
   )
