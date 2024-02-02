@@ -10,8 +10,8 @@ type AuthContentProps = {
 const AuthContent: FC<AuthContentProps> = ({ children, className }) => {
   return (
     <div className={cn('h-screen w-screen bg-gradient-blue-white', className)}>
-      <Content className="flex items-center justify-center dark:bg-none dark:bg-base-gray-8">
-        <section className="p-7 sm:p-10 flex gap-7 md:gap-[3.75rem] rounded-3xl bg-base-white dark:bg-base-black">
+      <Content className="flex items-start justify-center dark:bg-none dark:bg-base-gray-8 md:items-center">
+        <section className="justify-center p-0 flex gap-7 rounded-3xl dark:bg-base-black xs:p-4 sm:p-7 md:bg-base-white md:gap-[1.75rem] lg:gap-16">
           {children}
         </section>
       </Content>
