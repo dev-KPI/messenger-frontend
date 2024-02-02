@@ -7,7 +7,11 @@ type ContentProps = {
 }
 
 const Content: FC<ContentProps> = ({ children, className }) => {
-  return <div className={cn('px-5 w-full h-full', className)}>{children}</div>
+  return (
+    <div className={cn('px-4 w-full h-full sm:px-5', className)}>
+      {children}
+    </div>
+  )
 }
 
 export default Content
