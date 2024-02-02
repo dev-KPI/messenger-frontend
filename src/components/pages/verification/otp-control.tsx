@@ -33,10 +33,10 @@ const OtpControl: FC<OtpControlProps> = ({ className }) => {
   }
 
   return (
-    <div className={cn('lg:pr-28', className)}>
+    <div className={cn('mt-4 md:mt-5 md:pr-14 lg:pr-28', className)}>
       <p
         className={cn(
-          'cursor-default text-base-gray-6',
+          'cursor-default text-base-gray-6 text-center md:text-left',
           otpIsInvalid && 'text-bright-red'
         )}
       >
@@ -45,17 +45,17 @@ const OtpControl: FC<OtpControlProps> = ({ className }) => {
           : 'Paste dynamically generated code'}
       </p>
       <OtpInput
-        className="mt-3"
+        className="mt-8 md:mt-3"
         isError={otpIsInvalid}
         length={LENGTH_OTP}
         onChange={otpChange}
         otpValue={otp}
       />
-      <button className="block mt-4 text-bright-orange">
+      <button className="block mt-8 text-bright-orange w-full text-center md:text-left md:mt-4">
         Didn&apos;t get anything? Resend me code.
       </button>
       <Button
-        className="w-full mt-3"
+        className="w-full mt-10 md:mt-3"
         disabled={otpIncomplete}
         onClick={validateOtp}
         variant={otpIncomplete ? 'disabled' : 'default'}
