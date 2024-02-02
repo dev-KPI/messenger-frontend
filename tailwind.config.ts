@@ -1,5 +1,7 @@
 import type { Config } from 'tailwindcss'
 
+import defaultTheme from 'tailwindcss/defaultTheme'
+
 const config: Config = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -108,6 +110,11 @@ const config: Config = {
           to: { height: '0' },
         },
       },
+    },
+    screens: {
+      vs: '320px',
+      xs: '475px',
+      ...defaultTheme.screens,
     },
   },
 }
