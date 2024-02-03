@@ -11,13 +11,13 @@ export default function Auth() {
         <Icons.golub />
       </ImageCard>
       <article>
-        <header className="flex justify-between pb-2">
+        <header className="flex justify-between">
           <h1 className="title-lg">Authentication</h1>
           <div className="hidden md:block">
             <ThemeToggler />
           </div>
         </header>
-        <AuthForm className="mt-5" />
+        <AuthForm className="mt-8 md:mt-5" />
       </article>
     </AuthContent>
   )
