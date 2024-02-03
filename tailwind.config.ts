@@ -112,7 +112,7 @@ const config: Config = {
       },
     },
     screens: {
-      vs: '320px',
+      vs: '360px',
       xs: '475px',
       ...defaultTheme.screens,
     },
