@@ -12,7 +12,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           <div className="relative">
             <input
               className={cn(
-                'relative z-[5] peer pt-5 px-4 pb-2.5 w-full outline-none rounded-2xl border border-base-gray-3 focus:border-base-gray-5 dark:border-base-gray-7 bg-transparent placeholder:opacity-0 transition-colors',
+                'relative peer pt-5 px-4 pb-2.5 w-full outline-none rounded-2xl border border-base-gray-3 focus:border-base-gray-5 dark:border-base-gray-7 bg-transparent placeholder:opacity-0 transition-colors',
                 className
               )}
               placeholder={placeholder}
@@ -27,7 +27,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         ) : (
           <input
             className={cn(
-              'relative z-[5] peer pt-5 px-4 pb-2.5 w-full outline-none rounded-2xl border border-base-gray-3 focus:border-base-gray-5 dark:border-base-gray-7 bg-transparent placeholder:opacity-0 transition-colors',
+              'relative peer pt-5 px-4 pb-2.5 w-full outline-none rounded-2xl border border-base-gray-3 focus:border-base-gray-5 dark:border-base-gray-7 bg-transparent placeholder:opacity-0 transition-colors',
               className
             )}
             ref={ref}
