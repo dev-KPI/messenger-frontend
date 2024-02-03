@@ -41,7 +41,7 @@ const ProfileForm: FC<FormProfileProps> = ({ className }) => {
     <Form {...form}>
       <form
         className={cn(
-          'space-y-8 max-w-[343px] md:max-w-none md:pr-16 lg:pr-[9.75rem]',
+          'space-y-8 xs:max-w-[343px] md:max-w-none md:pr-16 lg:pr-[9.75rem]',
           className
         )}
         onSubmit={form.handleSubmit(onSubmit)}
@@ -64,8 +64,8 @@ const ProfileForm: FC<FormProfileProps> = ({ className }) => {
             </FormItem>
           )}
         />
-        <Button className="!mt-20 w-full md:!mt-8" type="submit">
-          Submit
+        <Button className="!mt-[5.75rem] w-full md:!mt-8" type="submit">
+          Done
         </Button>
       </form>
     </Form>
