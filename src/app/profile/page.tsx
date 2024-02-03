@@ -6,7 +6,7 @@ import { ThemeToggler } from '@/components/ui/theme-toggler'
 
 export default function Profile() {
   return (
-    <AuthContent className="*:*:flex-col *:*:grow bg-white md:*:*:grow-0 md:*:*:flex-row md:bg-gradient-blue-white">
+    <AuthContent className="profile-page bg-white md:bg-gradient-blue-white">
       <h3 className="text-lg font-medium text-center py-[0.4375rem] md:hidden">
         Profile
       </h3>

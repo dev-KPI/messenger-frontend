@@ -6,7 +6,7 @@ import { ThemeToggler } from '@/components/ui/theme-toggler'
 
 export default function Auth() {
   return (
-    <AuthContent className="*:*:pt-36 md:*:*:pt-10">
+    <AuthContent className="auth-page">
       <ImageCard className="-my-[4.375rem] hidden md:flex">
         <Icons.golub />
       </ImageCard>
