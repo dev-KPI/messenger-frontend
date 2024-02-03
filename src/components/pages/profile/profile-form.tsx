@@ -53,7 +53,7 @@ const ProfileForm: FC<FormProfileProps> = ({ className }) => {
             <FormItem>
               <FormControl>
                 <Input
-                  className="md:min-w-[343px]"
+                  className="md:min-w-[343px] bg-base-gray-2 md:bg-transparent"
                   id="profile_name"
                   placeholder="Profile Name"
                   type="text"

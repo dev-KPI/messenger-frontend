@@ -7,7 +7,7 @@ import { ThemeToggler } from '@/components/ui/theme-toggler'
 export default function Verification() {
   return (
     <AuthContent className="verification-page">
-      <ImageCard className="bg-none px-0 pb-[0.625rem] pt-[2.75rem] md:pt-10 md:hidden">
+      <ImageCard className="bg-none px-0 pb-[0.25rem] pt-[2.75rem] md:hidden">
         <Icons.messages />
       </ImageCard>
       <ImageCard className="-my-[4.375rem] hidden md:flex">

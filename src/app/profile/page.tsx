@@ -10,7 +10,7 @@ export default function Profile() {
       <h3 className="text-lg font-medium text-center py-[0.4375rem] md:hidden">
         Profile
       </h3>
-      <ImageCard className="p-0 bg-none md:-my-[4.375rem] md:py-32 md:px-[3.25rem] md:bg-gradient-purple-blue">
+      <ImageCard className="p-0 bg-none -mt-3 md:mt-0 md:-my-[4.375rem] md:py-32 md:px-[3.25rem] md:bg-gradient-purple-blue">
         <FileInput />
       </ImageCard>
       <article className="flex justify-center md:block">
@@ -20,7 +20,7 @@ export default function Profile() {
             <ThemeToggler />
           </div>
         </header>
-        <ProfileForm className="grow mt-8 md:mt-5" />
+        <ProfileForm className="grow mt-[2.1875rem] md:mt-5" />
       </article>
     </AuthContent>
   )

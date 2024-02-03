@@ -50,13 +50,19 @@ const AuthForm: FC<FormAuthProps> = ({ className }) => {
           render={({ field }) => (
             <FormItem>
               <FormLabel
-                className="block h-[2.75rem] md:h-auto"
+                className="block h-[2.75rem] pb-1 md:pb-0 md:h-auto"
                 htmlFor="email"
               >
                 Confirm your email and get dynamically generated code
               </FormLabel>
               <FormControl>
-                <Input id="email" placeholder="Email" type="text" {...field} />
+                <Input
+                  className="bg-white md:bg-transparent"
+                  id="email"
+                  placeholder="Email"
+                  type="text"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -66,7 +72,7 @@ const AuthForm: FC<FormAuthProps> = ({ className }) => {
           control={form.control}
           name="agreement"
           render={({ field }) => (
-            <FormItem className="flex flex-row items-start space-x-3 pb-2 pt-8 py-5 md:pb-0 md:py-0">
+            <FormItem className="flex flex-row items-start space-x-3 pt-[1.75rem] md:pt-0">
               <FormControl>
                 <Checkbox
                   checked={field.value}
@@ -83,7 +89,7 @@ const AuthForm: FC<FormAuthProps> = ({ className }) => {
             </FormItem>
           )}
         />
-        <Button className="!mt-[2.125rem] w-full md:!mt-3" type="submit">
+        <Button className="!mt-8 w-full md:!mt-3" type="submit">
           Submit
         </Button>
       </form>
