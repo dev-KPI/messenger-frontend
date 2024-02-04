@@ -95,37 +95,3 @@
     @apply text-xs uppercase;
   }
 }
-
-.auth-page section {
-  padding-top: 9rem;
-  padding-bottom: 9rem;
-}
-
-@media (min-width: theme('screens.md')) {
-  .auth-page section {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
-}
-
-.profile-page section {
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-@media (min-width: theme('screens.md')) {
-  .profile-page section {
-    flex-direction: row;
-    flex-grow: 0;
-  }
-}
-
-.verification-page section {
-  flex-direction: column;
-}
-
-@media (min-width: theme('screens.md')) {
-  .verification-page section {
-    flex-direction: row;
-  }
-}
