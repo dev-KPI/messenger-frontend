@@ -20,7 +20,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
               type={type}
               {...props}
             />
-            <span className="absolute z-0 top-1/2 peer-focus:top-[0.375rem] left-4 -translate-y-1/2 peer-focus:translate-y-0 peer-focus:text-[0.6875rem] peer-focus:leading-[0.8125rem] text-base-gray-5 transition-all peer-[:not(:placeholder-shown)]:translate-y-0 peer-[:not(:placeholder-shown)]:top-[0.375rem] peer-[:not(:placeholder-shown)]:text-[0.6875rem] peer-[:not(:placeholder-shown)]:leading-[0.8125rem];">
+            <span className="absolute z-0 top-1/2 pointer-events-none peer-focus:top-[0.375rem] left-4 -translate-y-1/2 peer-focus:translate-y-0 peer-focus:text-[0.6875rem] peer-focus:leading-[0.8125rem] text-base-gray-5 transition-all peer-[:not(:placeholder-shown)]:translate-y-0 peer-[:not(:placeholder-shown)]:top-[0.375rem] peer-[:not(:placeholder-shown)]:text-[0.6875rem] peer-[:not(:placeholder-shown)]:leading-[0.8125rem];">
               {placeholder}
             </span>
           </div>
