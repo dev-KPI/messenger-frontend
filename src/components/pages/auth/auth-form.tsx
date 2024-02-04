@@ -40,24 +40,18 @@ const AuthForm: FC<FormAuthProps> = ({ className }) => {
 
   return (
     <Form {...form}>
-      <form
-        className={cn('space-y-8', className)}
-        onSubmit={form.handleSubmit(onSubmit)}
-      >
+      <form className={className} onSubmit={form.handleSubmit(onSubmit)}>
         <FormField
           control={form.control}
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel
-                className="block h-[2.75rem] pb-1 md:pb-0 md:h-auto"
-                htmlFor="email"
-              >
+              <FormLabel htmlFor="email">
                 Confirm your email and get dynamically generated code
               </FormLabel>
               <FormControl>
                 <Input
-                  className="bg-white md:bg-transparent"
+                  className="bg-base-white dark:bg-base-gray-8 md:bg-transparent md:dark:bg-transparent"
                   id="email"
                   placeholder="Email"
                   type="text"
@@ -72,7 +66,7 @@ const AuthForm: FC<FormAuthProps> = ({ className }) => {
           control={form.control}
           name="agreement"
           render={({ field }) => (
-            <FormItem className="flex flex-row items-start space-x-3 pt-[1.75rem] md:pt-0">
+            <FormItem className="flex flex-row items-start space-x-3 mt-[3.75rem] md:mt-10">
               <FormControl>
                 <Checkbox
                   checked={field.value}
@@ -80,7 +74,7 @@ const AuthForm: FC<FormAuthProps> = ({ className }) => {
                   onCheckedChange={field.onChange}
                 />
               </FormControl>
-              <div className="!mt-0 h-[2.5rem] md:h-auto">
+              <div className="!mt-0">
                 <FormLabel htmlFor="agreement">
                   I agree to Terms & Conditions and Privacy Policy
                 </FormLabel>
@@ -89,7 +83,7 @@ const AuthForm: FC<FormAuthProps> = ({ className }) => {
             </FormItem>
           )}
         />
-        <Button className="!mt-8 w-full md:!mt-3" type="submit">
+        <Button className="mt-8 w-full md:mt-3" type="submit">
           Submit
         </Button>
       </form>

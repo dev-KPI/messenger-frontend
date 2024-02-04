@@ -51,11 +51,11 @@ const OtpControl: FC<OtpControlProps> = ({ className }) => {
         onChange={otpChange}
         otpValue={otp}
       />
-      <button className="block mt-[1.75rem] text-bright-orange w-full text-center md:text-left md:mt-4">
+      <button className="block mt-7 text-bright-orange w-full text-center md:text-left md:mt-4">
         Didn&apos;t get anything? Resend me code.
       </button>
       <Button
-        className="w-full mt-[2.3125rem] md:mt-3"
+        className="w-full mt-9 md:mt-3"
         disabled={otpIncomplete}
         onClick={validateOtp}
         variant={otpIncomplete ? 'disabled' : 'default'}
