@@ -11,7 +11,7 @@ type AuthContentProps = {
 const AuthContent: FC<AuthContentProps> = ({ children, className }) => {
   return (
     <div className={cn('h-screen w-screen bg-gradient-blue-white', className)}>
-      <Content className="flex items-start justify-center dark:bg-none dark:bg-base-gray-8 md:items-center">
+      <Content className="flex items-start justify-center dark:bg-base-gray-9 md:items-center">
         {children}
         <div className="absolute top-5 right-5">
           <ThemeToggler />
