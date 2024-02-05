@@ -114,6 +114,7 @@ const FormControl = React.forwardRef<
           : `${formDescriptionId} ${formMessageId}`
       }
       aria-invalid={!!error}
+      className="relative"
       id={formItemId}
       ref={ref}
       {...props}
@@ -152,7 +153,7 @@ const FormMessage = React.forwardRef<
 
   return (
     <p
-      className={cn('!mt-1 ml-4 text-xs text-bright-red', className)}
+      className={cn('!mt-1 ml-4 text-xs text-bright-red absolute', className)}
       id={formMessageId}
       ref={ref}
       {...props}

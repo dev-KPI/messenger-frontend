@@ -14,7 +14,8 @@
     "typescript:check": "tsc -p tsconfig.json",
     "env:local": "cp .env.local.dist .env.local",
     "prepare": "husky install",
-    "cspell": "cspell --show-suggestions --show-context --gitignore ."
+    "cspell": "cspell --show-suggestions --show-context --gitignore .",
+    "cspell:apply": "cspell --words-only --unique --gitignore . >> project-words.txt"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
