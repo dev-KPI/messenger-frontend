@@ -1,4 +1,5 @@
 import Content from '@/components/ui/content'
+import { ThemeToggler } from '@/components/ui/theme-toggler'
 import { cn } from '@/lib/utils'
 import { FC, ReactNode } from 'react'
 
@@ -12,6 +13,9 @@ const AuthContent: FC<AuthContentProps> = ({ children, className }) => {
     <div className={cn('h-screen w-screen bg-gradient-blue-white', className)}>
       <Content className="flex items-start justify-center dark:bg-none dark:bg-base-gray-8 md:items-center">
         {children}
+        <div className="absolute top-5 right-5">
+          <ThemeToggler />
+        </div>
       </Content>
     </div>
   )
