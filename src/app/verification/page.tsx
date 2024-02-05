@@ -2,7 +2,6 @@ import AuthContent from '@/components/pages/auth-content'
 import OtpControl from '@/components/pages/verification/otp-control'
 import { Icons } from '@/components/ui/icons'
 import ImageCard from '@/components/ui/image-card'
-import { ThemeToggler } from '@/components/ui/theme-toggler'
 
 export default function Verification() {
   return (
@@ -17,9 +16,6 @@ export default function Verification() {
         <article>
           <header className="flex justify-center items-center md:justify-between">
             <h1 className="title-lg">Check your Email</h1>
-            <div className="hidden md:block">
-              <ThemeToggler />
-            </div>
           </header>
           <OtpControl />
         </article>
